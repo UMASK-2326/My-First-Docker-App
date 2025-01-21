@@ -1,19 +1,23 @@
-#our base image
-FROM alpine:3.5
+# Use a modern Alpine image with Python 3
+FROM python:3.9-alpine
 
-#install python and pip
-RUN apk add --update py2-pip
+# Set working directory
+WORKDIR /usr/src/app
 
-#install needed modules
-COPY requirements.txt /usr/src/app/
-RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
+# Install system dependencies and upgrade pip
+RUN apk add --no-cache --virtual .build-deps gcc musl-dev libffi-dev \
+    && pip install --upgrade pip
 
-#copy files
-COPY app.py /usr/src/app/
-COPY templates/index.html /usr/src/app/templates/
+# Copy requirements and install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-#set the port number
+# Copy application code
+COPY app.py .
+COPY templates/index.html ./templates/
+
+# Expose port 80
 EXPOSE 80
 
-#run the app
-CMD ["python", "/usr/src/app/app.py"]
+# Run the application
+CMD ["python", "app.py"]
