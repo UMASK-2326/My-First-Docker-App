@@ -10,7 +10,7 @@ env:
   ECR_REPOSITORY: project-1
   ECS_SERVICE: skuma
   ECS_CLUSTER: project_uma
-  ECS_TASK_DEFINITION: arn:aws:ecs:ap-south-1:061051223657:task-definition/task_um:1
+  ECS_TASK_DEFINITION: arn:aws:ecs:ap-south-1:061051223657:task-definition/task_um:2
   CONTAINER_NAME: "Sk"
 
 jobs:
