@@ -13,7 +13,7 @@ COPY app.py /usr/src/app/
 COPY templates/index.html /usr/src/app/templates/
 
 #set the port number
-EXPOSE 5000
+EXPOSE 80
 
 #run the app
 CMD ["python", "/usr/src/app/app.py"]
