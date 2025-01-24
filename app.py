@@ -5,7 +5,7 @@ import random
 app = Flask(__name__)
 
 # Path to the images directory
-IMAGE_FOLDER = "images/uma.jpg"
+IMAGE_FOLDER = "images"
 
 # List of image filenames from the folder
 images = [f for f in os.listdir(IMAGE_FOLDER) if f.endswith(('png', 'jpg', 'jpeg', 'gif'))]
