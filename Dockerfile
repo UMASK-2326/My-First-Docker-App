@@ -17,7 +17,7 @@ COPY app.py .
 COPY templates/index.html ./templates/
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 5000
 
 # Run the application
 CMD ["python", "app.py"]
