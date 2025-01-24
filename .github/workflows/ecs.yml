@@ -8,7 +8,7 @@ on:
 env:
   AWS_REGION: ap-south-1
   ECR_REPOSITORY: project-1
-  ECS_SERVICE: skuma
+  ECS_SERVICE: umask
   ECS_CLUSTER: project_uma
   ECS_TASK_DEFINITION: taskdefinition.json
   CONTAINER_NAME: "Sk"
