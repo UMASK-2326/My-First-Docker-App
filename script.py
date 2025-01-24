@@ -4,7 +4,7 @@ import os
 
 # Define the port and directory where images are stored
 PORT = 5000
-DIRECTORY = "images"  # Ensure your image is inside this folder
+DIRECTORY = "static/images"  # Ensure your image is inside this folder
 
 # Change the working directory to serve images
 os.chdir(DIRECTORY)
