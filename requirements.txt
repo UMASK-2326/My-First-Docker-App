@@ -1,1 +1,5 @@
-Flask==0.10.1
+Flask>=2.0
+Jinja2>=3.0
+Werkzeug>=2.0
+itsdangerous>=2.0
+MarkupSafe>=2.0
