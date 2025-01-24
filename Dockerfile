@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY app.py .
 COPY templates/index.html ./templates/
-COPY images/uma.jpg ./images
+COPY images/uma.jpg ./images/
 # Expose port 80
 EXPOSE 5000
 
